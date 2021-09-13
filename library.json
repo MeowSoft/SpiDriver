@@ -1,0 +1,11 @@
+{
+  "name": "SpiDriver",
+  "version": "1.0.2",
+  "description": "An SPI driver",
+  "authors":
+  [
+    {
+      "name": "Chris"
+    }
+  ]
+}
