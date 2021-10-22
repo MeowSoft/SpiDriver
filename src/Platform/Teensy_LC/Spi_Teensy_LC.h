@@ -37,7 +37,7 @@ class Spi_Teensy_LC : public Spi_Base {
 
 		void startTransaction(void);
 		void endTransaction(void);
-        void writeData16Multi(uint16_t data,uint32_t times);
+        void writeData16Multi(uint16_t data, uint32_t times);
 
         #if !defined (SPI_HAS_TRANSACTION)
         void setBitrate(uint32_t rate) override;

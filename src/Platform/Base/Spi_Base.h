@@ -32,9 +32,9 @@ class Spi_Base : public Spi_Interface {
 
     protected:
 
-        virtual void _selectData() = 0;
-        virtual void _selectCommand() = 0;
-        virtual void _deselect() = 0;
+        virtual void _selectData(void) = 0;
+        virtual void _selectCommand(void) = 0;
+        virtual void _deselect(void) = 0;
         virtual void _write8(uint8_t c) = 0;
         virtual void _write16(uint16_t d) = 0;
 };

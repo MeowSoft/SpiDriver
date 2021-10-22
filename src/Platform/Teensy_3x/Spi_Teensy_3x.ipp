@@ -48,7 +48,10 @@ PREFIX void Spi_Teensy_3x::writeData16AndDeselect(uint16_t d) {
     _waitTransmitComplete(mcr);
 }
 
-PREFIX void Spi_Teensy_3x::writeData16Multi(uint16_t data,uint32_t times) {
+PREFIX void Spi_Teensy_3x::writeData16Multi(
+    uint16_t data,
+    uint32_t times
+) {
     do {
         writeData16(data);
     } while (--times > 0);

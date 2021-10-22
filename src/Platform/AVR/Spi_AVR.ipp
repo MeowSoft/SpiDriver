@@ -49,8 +49,8 @@ PREFIX void Spi_AVR::_write8(uint8_t c) {
 }
 
 PREFIX void Spi_AVR::_write16(uint16_t c) {
-    _spiwrite(c >> 8); 
-    _spiwrite(c);
+    _write8(c >> 8); 
+    _write8(c);
 }
 
 #undef PREFIX

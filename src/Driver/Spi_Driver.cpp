@@ -23,7 +23,7 @@ void SPI_Driver::init(
     const uint8_t csPin,
     const uint8_t dcPin
 ) {
-    Spi_ = Spi_Due();
+    Spi_ = Spi_ARM();
     Spi_.init(csPin, dcPin); 
 }
 
@@ -45,7 +45,7 @@ void SPI_Driver::init(
     const uint8_t dcPin
 ) {
     Spi_ = Spi_AVR();
-    Spi_.init(csPin, cdcPind); 
+    Spi_.init(csPin, dcPin); 
 }
 
 // ====================================
@@ -83,7 +83,7 @@ bool SPI_Driver::validatePins(
 ) {
     
     const char* error;
-    if (!(Spi_.validatePins(sdoPin, sckPin, csPin, dcPin, error)) {
+    if (!(Spi_.validatePins(sdoPin, sckPin, csPin, dcPin, error))) {
         logger(error);
         return false;
     }
